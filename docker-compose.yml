@@ -2,13 +2,14 @@ version: '3.8'
 
 services:
   minecraft:
-    build: .
+    image: itzg/minecraft-server  # Use the official Minecraft server image
     ports:
-      - "25565:25565"
+      - "25565:25565"  # Expose the default Minecraft port
     environment:
-      EULA: "TRUE"
-      VERSION: "1.16.5"  # Specify the version
+      EULA: "TRUE"  # Accept the EULA
+      VERSION: "1.16.5"  # Specify the Minecraft version
       ONLINE_MODE: "FALSE"  # Allow cracked clients
+      MEMORY: "512M"  # Set memory allocation to 512 MB
     volumes:
       - minecraft_data:/data  # Persist data
 
