@@ -5,8 +5,8 @@ FROM itzg/minecraft-server
 ENV EULA=TRUE
 ENV VERSION=1.16.5
 ENV ONLINE_MODE=FALSE
+ENV MEMORY=512M
 
-# Allow cracked clients
 # Expose the default Minecraft port
 EXPOSE 25565
 
